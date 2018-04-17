@@ -20,12 +20,12 @@ public class Table {
 	}
 	public void RemovePlayerFromTable(Player p)
 	{
-		hmTablePlayers.remove(p);		
+		hmTablePlayers.remove(p.getPlayerID());		
 	}
 	
 	public Player GetPlayerFromTable(Player p)
 	{
-		hmTablePlayers.get(p);	
+		hmTablePlayers.get(p.getPlayerID());	
 		return null;
 	}
 	public void ClearTable()
