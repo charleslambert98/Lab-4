@@ -25,11 +25,11 @@ public abstract class GamePlay {
 	}
 	protected void RemovePlayerFromGame(Player p)
 	{
-		hmGamePlayers.remove(p);		
+		hmGamePlayers.remove(p.getPlayerID());		
 	}
 	protected Player GetPlayerInGame(Player p)
 	{
-		hmGamePlayers.get(p);
+		hmGamePlayers.get(p.getPlayerID());
 		return null;
 	}
 }
