@@ -29,7 +29,6 @@ public abstract class GamePlay {
 	}
 	protected Player GetPlayerInGame(Player p)
 	{
-		hmGamePlayers.get(p.getPlayerID());
-		return null;
+		return hmGamePlayers.get(p.getPlayerID());
 	}
 }

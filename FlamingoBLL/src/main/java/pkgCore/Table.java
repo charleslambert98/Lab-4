@@ -25,8 +25,8 @@ public class Table {
 	
 	public Player GetPlayerFromTable(Player p)
 	{
-		hmTablePlayers.get(p.getPlayerID());	
-		return null;
+		return hmTablePlayers.get(p.getPlayerID());	
+		
 	}
 	public void ClearTable()
 	{
