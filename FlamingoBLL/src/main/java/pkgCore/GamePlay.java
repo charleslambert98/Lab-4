@@ -31,4 +31,8 @@ public abstract class GamePlay {
 	{
 		return hmGamePlayers.get(p.getPlayerID());
 	}
+	
+	protected ArrayList<Player> GetPlayersInGame(){
+		return new ArrayList<Player> (hmGamePlayers.values());
+	}
 }

@@ -19,6 +19,16 @@ public class Deck {
 		}
 		Collections.shuffle(cardsInDeck);
 	}
+	public Deck(int iNbrOfDecks) {
+		for (int i = 0; i < iNbrOfDecks; i++) {
+			for (eSuit eSuit : eSuit.values()) {
+				for (eRank eRank : eRank.values()) {
+					cardsInDeck.add(new Card(eSuit, eRank));
+				}
+			}
+		}
+		Collections.shuffle(cardsInDeck);
+	}
 
 	public Card Draw() throws DeckException {
 

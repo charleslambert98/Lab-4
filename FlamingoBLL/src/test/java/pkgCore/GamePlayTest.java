@@ -12,8 +12,9 @@ public class GamePlayTest {
 
 	@Test
 	public void testGamePlay() {
-		eGameType eGame = eGameType.BLACKJACK;
-		GamePlayBlackJack gp = new GamePlayBlackJack(eGame);
+		
+		Table t = new Table();
+		GamePlayBlackJack gp = new GamePlayBlackJack(t);
 		
 		Player p1 = new Player("John", 123);
 		Player p2 = new Player("Jim", 456);
@@ -32,10 +33,13 @@ public class GamePlayTest {
 		assertEquals(456, gp.GetPlayerInGame(p2).getiPokerClientID());
 		assertEquals(p2.getPlayerID(), gp.GetPlayerInGame(p2).getPlayerID());
 		
+		assertEquals(2, gp.GetPlayersInGame().size());
+		
 		gp.RemovePlayerFromGame(p1);
 		gp.RemovePlayerFromGame(p2);
 		assertEquals(null,gp.GetPlayerInGame(p1));
 		assertEquals(null,gp.GetPlayerInGame(p2));
+		
 	}
 
 }
