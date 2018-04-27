@@ -199,4 +199,8 @@ public class Flamingo extends Application {
 
 	}
 
+	public Player getAppPlayer() {
+		return this.appPlayer;
+	}
+
 }

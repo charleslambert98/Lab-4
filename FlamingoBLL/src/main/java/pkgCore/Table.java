@@ -20,8 +20,10 @@ public class Table {
 		switch(eGT) {
 		case BLACKJACK:
 			TableDeck = new Deck(6);
+			break;
 		case POKER:
 			TableDeck = new Deck();
+			break;
 		}
 	}
 	

@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
+import pkgEnum.eGameType;
+
 public class TableTest {
 
 	@Test
@@ -27,6 +29,17 @@ public class TableTest {
 		
 		t.RemovePlayerFromTable(p);
 		assertNull(t.GetPlayerFromTable(p));
+	}
+	@Test
+	public void testTableDeck() {
+		Table t = new Table();
+		assertNotNull(t);
+		
+		t.CreateDeck(eGameType.BLACKJACK);
+		
+		assertNotNull(t.GetTableDeck());
+		
+		assertEquals(52*6, t.GetTableDeck().getiDeckCount());
 	}
 
 }
